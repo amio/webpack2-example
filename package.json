@@ -1,0 +1,29 @@
+{
+  "name": "yudada-webapp",
+  "version": "1.0.0",
+  "description": "",
+  "private": true,
+  "main": "index.js",
+  "scripts": {
+    "clean": "rm -rf webapp-dist && mkdir webapp-dist",
+    "copy": "npm run clean && cp webapp/*.html webapp-dist && cp -R webapp/img webapp-dist && cp -R webapp/3rd webapp-dist",
+    "prebuild": "npm run copy",
+    "build": "webpack",
+    "dev": "webpack-dev-server --hot --inline & open http://localhost:8080",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "autoprefixer": "^6.3.6",
+    "babel-core": "^6.9.1",
+    "babel-loader": "^6.2.4",
+    "babel-preset-es2015-webpack": "^6.4.1",
+    "css-loader": "^0.23.1",
+    "extract-text-webpack-plugin": "^1.0.1",
+    "open": "0.0.5",
+    "postcss-loader": "^0.9.1",
+    "url-loader": "^0.5.7",
+    "webpack": "^2.1.0-beta.13",
+    "webpack-dev-server": "^2.1.0-beta.0"
+  },
+  "dependencies": {}
+}
