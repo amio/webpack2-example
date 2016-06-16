@@ -38,6 +38,7 @@ module.exports = {
     ]
   },
   devServer: {
+    contentBase: 'webapp-dist',
     hot: true,
     inline: true
   }
